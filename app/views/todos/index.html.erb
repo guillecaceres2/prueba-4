@@ -1,0 +1,51 @@
+<h1>Todos#index</h1>
+
+
+            
+
+<div class="card-group">
+
+<% @todos.each_slice(3) do |row| %>
+<% row.each do |todo| %>
+<div class= "col">
+ <div class="card" style="width: 10rem;">
+  <%= image_tag todo.photo %>
+    <div class="card-body">
+    <h5 class="card-title"><%= todo.name  %></h5>
+    <p class="card-text"><%= todo.description  %></p>
+    </div>
+        <li class="list-group-item">completado o no completado</li>
+      <div class="card-body">
+        <a href="todos#show" class="card-link">Completado</a>
+      </div>
+    <li class="list-group-item">completado o no completado</li>
+      <div class="card-body">
+        <a href="todos#show" class="card-link">Show</a>
+      </div>
+
+ </div>
+</div>
+<div class= "col">
+ <div class="card" style="width: 10rem;">
+  <%= image_tag todo.photo %>
+    <div class="card-body">
+    <h5 class="card-title"><%= todo.name  %></h5>
+    <p class="card-text"><%= todo.description  %></p>
+    </div>
+    <li class="list-group-item">completado o no completado</li>
+      <div class="card-body">
+        <a href="todos#show" class="card-link">Completado</a>
+      </div>
+          <li class="list-group-item">completado o no completado</li>
+      <div class="card-body">
+        <a href="todos#show" class="card-link">Show</a>
+      </div>
+
+ </div>
+</div>
+
+<% end %>
+<% end %>
+</div>
+
+
